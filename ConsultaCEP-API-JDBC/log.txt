@@ -1,0 +1,3 @@
+br.edu.fatecpg.api.Endereco{id=0, cep='11703-330', rua='Rua Pajé', bairro='Tupi', cidade='Praia Grande', estado='SP'}2024-08-28T20:11:22.081932-03:00
+br.edu.fatecpg.api.Endereco{id=0, cep='11704-450', rua='Rua Comendador Otto Carlos Golanda', bairro='Ocian', cidade='Praia Grande', estado='SP'}2024-08-28T20:26:02.972580-03:00
+Endereco {ID=0, CEP='11703-330', Rua='Rua Pajé', Bairro='Tupi', Cidade='Praia Grande', Estado='SP'}2024-08-28T20:31:05.405632-03:00
