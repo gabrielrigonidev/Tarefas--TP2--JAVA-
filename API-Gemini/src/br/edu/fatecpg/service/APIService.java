@@ -1,9 +1,12 @@
 package br.edu.fatecpg.service;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -41,5 +44,21 @@ public class APIService {
             }
         }
         return answer.toString().trim();
+    }
+
+    public static String gerarResumo(List<String> respostas) {
+        StringBuilder resumo = new StringBuilder("Resumo das Respostas:\n");
+        for (String resposta : respostas) {
+            resumo.append("Respostas: ").append(resposta).append("\n");
+        }
+        return resumo.toString().trim();
+    }
+
+    public static void gravarResumoEmArquivo(String resumo) {
+        try (FileWriter escrita = new FileWriter("resumo.md", false)) {
+            escrita.write(resumo + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
